@@ -7,7 +7,6 @@
 
 #include <iostream>
 #include <iomanip>
-#include <vector>
 using namespace std;
 
 template<typename T>
@@ -78,20 +77,6 @@ private:
         Node* temp = node;
         while(temp and temp->right) temp = temp->right;
         return temp;
-    }
-
-
-    void print(Node* node, int tab = 0) {
-        if (node) {
-            if (node->right) print(node->right, tab + 4);
-            if (tab) cout << setw(tab) << ' ';
-            if (node->right) cout << " /\n" << setw(tab) << ' ';
-            cout << node->key << "\n";
-            if (node->left) {
-                cout << setw(tab) << ' ' << " \\\n";
-                print(node->left, tab + 4);
-            }
-        }
     }
 
     bool isBalanced(Node* node){
