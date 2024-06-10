@@ -14,8 +14,11 @@ int main() {
     tree->insert(50);
     tree->insert(25);
     tree->preorder();
+    cout << tree->size() << endl;
+    cout << boolalpha << tree->isBalanced() << endl;
     tree->erase(40);
     tree->preorder();
+    cout << tree->size() << endl;
     cout << boolalpha << tree->isBalanced() << endl;
     return 0;
 }
