@@ -6,16 +6,16 @@
 using namespace std;
 
 int main() {
-    AVL<int> tree;
-    tree.insert(10);
-    tree.insert(20);
-    tree.insert(30);
-    tree.insert(40);
-    tree.insert(50);
-    tree.insert(25);
-    tree.preorder();
-    tree.erase(40);
-    tree.preorder();
-    cout << boolalpha << tree.isBalanced() << endl;
+    auto* tree = new AVL<int>();
+    tree->insert(10);
+    tree->insert(20);
+    tree->insert(30);
+    tree->insert(40);
+    tree->insert(50);
+    tree->insert(25);
+    tree->preorder();
+    tree->erase(40);
+    tree->preorder();
+    cout << boolalpha << tree->isBalanced() << endl;
     return 0;
 }
